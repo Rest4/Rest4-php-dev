@@ -1,0 +1,33 @@
+## Server: Prefix your instances domains to match your local server
+# ex: rest4.org becomes rest4.org.ewk on my own development server
+# i use my own name server to serve *.ewk like domains
+server.srvtld=ewk
+# you can otherwise set the domain as localhost if you've got only one Rest4
+# instance installed locally
+# server.domain=localhost
+
+## Debug: Will log some informations on the PHP error.log file
+server.debug=true
+
+# Cache: [empty] (disabled), fs (filesystem), x (xcache), mem (memcache), apc ...
+# I often swith between a blank value and xcache depending on the debug phasis
+server.cache=xcache
+
+# Http: Disable http cache
+http.cache=false
+http.maxage=0
+http.revalidate=true
+http.gzip=0
+
+# Database: You can define one user for each Rest4 instances
+# Usefull if you don't want to duplicate each prod server user on you local one
+#database.user=root
+#database.password=
+
+# Authentication: If you're on a safe network, you can enable god mode on each
+# Rest4 instances (be carefull...)
+# server.auth=default
+# auth.public.id=0
+# auth.public.group=0
+# auth.public.rights.+.path=/(.*)
+# auth.public.rights.*.methods=OPTIONS,GET,PUT,POST,DELETE
